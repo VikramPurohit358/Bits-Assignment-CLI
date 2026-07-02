@@ -1,0 +1,37 @@
+1.Command :-
+    $ mkdir -p secure_project/docs secure_project/data
+Output :-
+    
+
+2.Command :-
+    $ umask
+Output :-
+    0022
+
+3.Command :-
+    $ ls -ld secure_project
+Output :-
+    drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:20 secure_project/
+
+4.Command :-
+    $ chmod 750 secure_project
+    $ chmod 700 secure_project/data
+Output :-
+    total 4
+    drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:07 ./
+    drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:07 ../
+
+5.Command :-
+    $ ls -la secure_project
+Output :-
+    total 0
+    drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:20 ./
+    drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:20 ../
+    drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:20 data/
+    drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:20 docs/
+
+
+
+
+
+

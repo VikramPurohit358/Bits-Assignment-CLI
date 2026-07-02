@@ -1,0 +1,21 @@
+1.Command :-
+    $ df -h
+Output :-
+    Filesystem            Size  Used Avail Use% Mounted on
+    C:/Program Files/Git  624G  359G  266G  58% /
+
+2.Command :-
+    $ du -sh *
+Output :-
+    4.0K    Commands and Output
+
+3.Command :-
+    $ df -T
+Output :-
+    Filesystem           Type 1K-blocks      Used Available Use% Mounted on
+    C:/Program Files/Git ntfs 653700092 375409932 278290160  58% /
+
+4.Command :-
+    $ vi Storage_Assessment_Report.txt
+Output :-
+    

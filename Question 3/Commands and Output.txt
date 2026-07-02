@@ -1,0 +1,42 @@
+1.Command :-
+    $ echo "Core Developer File" > original.txt
+Output :-
+    
+
+2.Command :-
+    ln original.txt hardlink.txt
+Output :-
+    
+
+3.Command :-
+    $ ln -s original.txt symlink.txt
+Output :-
+    
+
+4.Command :-
+    $ ls -li original.txt hardlink.txt symlink.txt
+Output :-
+    5629499534509077 -rw-r--r-- 2 Gamin 197609 20 Jul  2 11:31 hardlink.txt
+    5629499534509077 -rw-r--r-- 2 Gamin 197609 20 Jul  2 11:31 original.txt
+    8725724278361780 -rw-r--r-- 1 Gamin 197609 20 Jul  2 11:31 symlink.txt
+
+5.Command :-
+    rm original.txt
+Output :-
+
+
+6.Command :-
+    $ cat hardlink.txt
+Output :-
+    Core Developer File
+
+7.Command :-
+    $ cat symlink.txt
+Output :-
+    Core Developer File
+
+
+
+
+
+

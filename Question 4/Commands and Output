@@ -1,0 +1,55 @@
+1.Command :-
+    $ ps
+Output :-
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+      315     142     315      17616  pty0      197609 11:40:39 /usr/bin/p
+      141       1     141      10960  ?         197609 11:08:39 /usr/bin/m
+      142     141     142       9452  pty0      197609 11:08:39 /usr/bin/b
+
+2.Command :-
+    $ ls -ls /proc/$$/
+Output :-
+    total 0
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 cmdline
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 ctty
+    0 lrwxrwxrwx 1 Gamin 197609 0 Jul  2 11:40 cwd -> '/c/users/Gamin/Music/Vikram Assignment/Question 4'/
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 environ
+    0 lrwxrwxrwx 1 Gamin 197609 0 Jul  2 11:40 exe -> /usr/bin/bash*
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 exename
+    0 dr-xr-xr-x 2 Gamin 197609 0 Jul  2 11:08 fd/
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 gid
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 maps
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 mountinfo
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 mounts
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 pgid
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 ppid
+    0 lrwxrwxrwx 1 Gamin 197609 0 Jul  2 11:40 root -> //
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 sid
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 stat
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 statm
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 status
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 uid
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 winexename
+    0 -r--r--r-- 1 Gamin 197609 0 Jul  2 11:40 winpid
+
+3.Command :-
+    $ echo "Standard Output log stream" > app_output.log
+Output :-
+    
+
+4.Command :-
+    $ cat non_existent_file.txt 2> app.error.log
+Output :-
+
+    
+5.Command :-
+    $ ulimit -s
+Output :-
+    2032
+
+
+
+
+
+
+

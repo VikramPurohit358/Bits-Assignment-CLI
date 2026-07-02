@@ -1,0 +1,53 @@
+======================================================================
+               STORAGE HEALTH ASSESSMENT REPORT
+======================================================================
+
+1. Available Storage Devices & Mounted Filesystems
+----------------------------------------------------------------------
+Command Executed:
+$ df -h
+
+Terminal Output:
+Filesystem            Size  Used Avail Use% Mounted on
+C:/Program Files/Git  624G  359G  266G  58% /
+
+Explanation:
+This command inspects mounted storage volumes to report total size capacities along with immediate availability summaries. I observed that our core virtual root point maps directly to the local system environment, displaying a 624G total volume boundary.
+
+
+2. Disk Usage Statistics
+----------------------------------------------------------------------
+Command Executed:
+$ du -sh *
+
+Terminal Output:
+4.0K    Commands and Output
+
+Explanation:
+This command calculates cumulative workspace storage consumption rates for directories inside the current execution path context. I observed that the active configuration files consume exactly 4.0K of memory space inside this specific assignment folder.
+
+
+3. Filesystem and Inode Capacity Type Assessment
+----------------------------------------------------------------------
+Command Executed:
+$ df -T
+
+Terminal Output:
+Filesystem           Type 1K-blocks      Used Available Use% Mounted on
+C:/Program Files/Git ntfs 653700092 375413284 278286808  58% /
+
+Explanation:
+This command identifies structural file allocation system configurations governing the active storage media. I observed that the underlying block structures operate under an NTFS filesystem mapping layer instead of a native Linux ext4 block, which means index tracking and inode properties are managed directly via Windows host system processes.
+
+
+4. Report Documentation Creation via Vi Editor
+----------------------------------------------------------------------
+Command Executed:
+$ vi Storage_Assessment_Report.txt
+
+Terminal Output:
+(Launches interactive text editor view window)
+
+Explanation:
+This command initializes the terminal-native interactive vi utility interface to manually compose, modify, and store local workspace observation summaries. I observed that it clears the active shell log to isolate an input space dedicated exclusively to editing plaintext documentation.
+======================================================================

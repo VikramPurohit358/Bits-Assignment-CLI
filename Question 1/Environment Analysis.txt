@@ -1,0 +1,74 @@
+======================================================================
+                  LINUX ENVIRONMENT VERIFICATION REPORT
+======================================================================
+
+1. User and Group Identity
+----------------------------------------------------------------------
+Command Executed:
+$ id
+
+Terminal Output:
+uid=197609(Gamin) gid=197609 groups=197609
+
+Explanation:
+This command prints the specific user ID (uid), primary group ID (gid), and supplementary group associations for the current session. I observed that my active account operates under the username 'Gamin' with a matching unique numerical identifier block of 197609.
+
+
+2. Active Environment Shell
+----------------------------------------------------------------------
+Command Executed:
+$ echo $SHELL
+
+Terminal Output:
+/usr/bin/bash
+
+Explanation:
+This command reads and prints the system configuration variable that defines the default command-line command interpreter. I observed that the emulation layer routes my environment requests using the standard Bash (/usr/bin/bash) processor.
+
+
+3. Present Working Directory
+----------------------------------------------------------------------
+Command Executed:
+$ pwd
+
+Terminal Output:
+/c/users/Gamin/Music/Vikram Assignment/Question 1
+
+Explanation:
+This command resolves and prints the absolute directory path of the active terminal shell. I observed that the window currently addresses the folder designated for 'Question 1' nested inside my Windows host system path structure.
+
+
+4. Workspace Directory Listing
+----------------------------------------------------------------------
+Command Executed:
+$ ls -la
+
+Terminal Output:
+total 4
+drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:07 ./
+drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:07 ../
+
+Explanation:
+This command requests a long-format structural list of all items inside the directory, including hidden entries denoted by a leading dot. I observed that the folder is completely empty aside from the standard system pointers mapping the current directory (./) and parent directory (../).
+
+
+5. Network Connectivity Verification
+----------------------------------------------------------------------
+Command Executed:
+$ ping -n 4 google.com
+
+Terminal Output:
+Pinging google.com [2404:6800:4000:1017::66] with 32 bytes of data:
+Reply from 2404:6800:4000:1017::66: time=39ms
+Reply from 2404:6800:4000:1017::66: time=43ms
+Reply from 2404:6800:4000:1017::66: time=39ms
+Reply from 2404:6800:4000:1017::66: time=57ms
+
+Ping statistics for 2404:6800:4000:1017::66:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 39ms, Maximum = 57ms, Average = 44ms
+
+Explanation:
+This command sends exactly four network check packets to an external address using the environment-compatible count modifier flag (-n). I observed a 0% data packet loss rate alongside stable response times, validating that both my local internet gateway and DNS address resolutions are working flawlessly.
+======================================================================

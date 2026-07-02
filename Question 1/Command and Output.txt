@@ -1,0 +1,40 @@
+1.Command :-
+    $ id
+Output :-
+    uid=197609(Gamin) gid=197609 groups=197609
+
+2.Command :-
+    $ echo $SHELL
+Output :-
+    /usr/bin/bash
+
+3.Command :-
+    $ pwd
+Output :-
+    /c/users/Gamin/Music/Vikram Assignment/Question 1
+
+4.Command :-
+    $ ls -la
+Output :-
+    total 4
+    drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:07 ./
+    drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:07 ../
+
+5.Command :-
+    $ ping -n 4 google.com
+Output :-
+    Pinging google.com [2404:6800:4000:1017::66] with 32 bytes of data:
+    Reply from 2404:6800:4000:1017::66: time=39ms
+    Reply from 2404:6800:4000:1017::66: time=43ms
+    Reply from 2404:6800:4000:1017::66: time=39ms
+    Reply from 2404:6800:4000:1017::66: time=57ms
+
+    Ping statistics for 2404:6800:4000:1017::66:
+        Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+    Approximate round trip times in milli-seconds:
+        Minimum = 39ms, Maximum = 57ms, Average = 44ms
+
+
+
+
+

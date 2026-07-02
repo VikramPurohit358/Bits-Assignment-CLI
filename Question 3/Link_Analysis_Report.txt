@@ -1,0 +1,89 @@
+======================================================================
+                  FILE SYSTEM AND LINK ANALYSIS REPORT
+======================================================================
+
+1. Base File Provisioning
+----------------------------------------------------------------------
+Command Executed:
+$ echo "Core Developer File" > original.txt
+
+Terminal Output:
+(Command executed cleanly with no output)
+
+Explanation:
+This command creates a new base asset text file named 'original.txt' and populates it with a standard string using the output redirection operator[cite: 3]. I observed that the command processed silently in the terminal layout[cite: 3].
+
+
+2. Hard Link Implementation
+----------------------------------------------------------------------
+Command Executed:
+$ ln original.txt hardlink.txt
+
+Terminal Output:
+(Command executed cleanly with no output)
+
+Explanation:
+This command generates a hard link pointing directly to the exact underlying physical data node as our source file[cite: 3]. I observed that a new reference pointer was added directly inside the current directory map[cite: 3].
+
+
+3. Symbolic Link Implementation
+----------------------------------------------------------------------
+Command Executed:
+$ ln -s original.txt symlink.txt
+
+Terminal Output:
+(Command executed cleanly with no output)
+
+Explanation:
+This command attempts to generate a symbolic link that points to the target filename path rather than its storage address index[cite: 3]. I observed that the environment processed the linking command cleanly without throwing compatibility exceptions[cite: 3].
+
+
+4. Metadata and Inode Inspection
+----------------------------------------------------------------------
+Command Executed:
+$ ls -li original.txt hardlink.txt symlink.txt
+
+Terminal Output:
+5629499534509077 -rw-r--r-- 2 Gamin 197609 20 Jul  2 11:31 hardlink.txt
+5629499534509077 -rw-r--r-- 2 Gamin 197609 20 Jul  2 11:31 original.txt
+8725724278361780 -rw-r--r-- 1 Gamin 197609 20 Jul  2 11:31 symlink.txt
+
+Explanation:
+This command lists index metadata parameters including the system inode identifiers for each file target[cite: 3]. I observed that 'original.txt' and 'hardlink.txt' share an identical tracking inode number (5629499534509077), confirming they share physical storage blocks, while 'symlink.txt' possesses a completely unique index identifier[cite: 3].
+
+
+5. Primary Asset Deletion
+----------------------------------------------------------------------
+Command Executed:
+$ rm original.txt
+
+Terminal Output:
+(Command executed cleanly with no output)
+
+Explanation:
+This command unlinks and deletes the primary reference point name 'original.txt' from the directory node structure. I observed that the source entry was completely detached from the filesystem environment layout.
+
+
+6. Hard Link Verification Post-Deletion
+----------------------------------------------------------------------
+Command Executed:
+$ cat hardlink.txt
+
+Terminal Output:
+Core Developer File
+
+Explanation:
+This command attempts to read the content streams retained within the hard link reference mapping. I observed that the message string displays properly because the underlying tracking inode still maintains an internal link reference count greater than zero.
+
+
+7. Symbolic Link Verification Post-Deletion
+----------------------------------------------------------------------
+Command Executed:
+$ cat symlink.txt
+
+Terminal Output:
+Core Developer File
+
+Explanation:
+This command verifies the readability of our symbolic reference point. I observed that it successfully displayed the file string content  because Git Bash running on top of a Windows NTFS file architecture emulates symbolic paths by generating physical target deep-clones to safeguard operational execution stability unless native windows symlink structures are explicitly declared.
+======================================================================

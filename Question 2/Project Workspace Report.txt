@@ -1,0 +1,79 @@
+======================================================================
+                  SECURE PROJECT WORKSPACE REPORT
+======================================================================
+
+1. Directory Structure Creation
+----------------------------------------------------------------------
+Command Executed:
+$ mkdir -p secure_project/docs secure_project/data
+
+Terminal Output:
+(Command executed cleanly with no output)
+
+Explanation:
+This command initializes a new project root directory alongside nested documentation and data subdirectories in a single line using the parent flag (-p). I observed that the directories were deployed into the filesystem without throwing any path errors.
+
+
+2. Baseline Environment Mask
+----------------------------------------------------------------------
+Command Executed:
+$ umask
+
+Terminal Output:
+0022
+
+Explanation:
+This command displays the current shell session's default permission mask used to strip access rights from newly created files and folders. I observed the octal value 0022, which outlines the system's baseline configuration for new assets.
+
+
+3. Query Target Metadata
+----------------------------------------------------------------------
+Command Executed:
+$ ls -ld secure_project
+
+Terminal Output:
+drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:20 secure_project/
+
+Explanation:
+This command queries the long-format metadata of the specific directory block itself rather than displaying its internal contents. I observed that the directory initial creation inherited default read, write, and execute permissions under my user profile.
+
+
+4. Security Hardening - Project Root
+----------------------------------------------------------------------
+Command Executed:
+$ chmod 750 secure_project
+
+Terminal Output:
+(Command executed cleanly with no output)
+
+Explanation:
+This command updates the file mode bits to grant full access to the owner, read/execute access to the group, and zero access to all external system users. I observed that the command processed cleanly through the terminal layer.
+
+
+5. Security Hardening - Sensitive Data
+----------------------------------------------------------------------
+Command Executed:
+$ chmod 750 secure_project/data
+
+Terminal Output:
+(Command executed cleanly with no output)
+
+Explanation:
+This command attempts to alter permissions on the data subfolder to match the secure project root configuration constraints. I observed that the command was successfully accepted by the command-line interface.
+
+
+6. Post-Hardening Verification
+----------------------------------------------------------------------
+Command Executed:
+$ ls -la secure_project
+
+Terminal Output:
+total 0
+drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:20 ./
+drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:20 ../
+drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:20 data/
+drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:20 docs/
+
+Explanation:
+This command lists the structural hierarchy of the secure project folder to verify permissions. I observed that because Git Bash runs on a Windows NTFS host, the terminal emulates standard POSIX bits, showing full read/execute attributes, while the structural creation remains successfully completed.
+======================================================================
