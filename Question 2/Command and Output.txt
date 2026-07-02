@@ -17,9 +17,7 @@ Output :-
     $ chmod 750 secure_project
     $ chmod 700 secure_project/data
 Output :-
-    total 4
-    drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:07 ./
-    drwxr-xr-x 1 Gamin 197609 0 Jul  2 11:07 ../
+    
 
 5.Command :-
     $ ls -la secure_project
